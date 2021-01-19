@@ -1,0 +1,55 @@
+.corner-square{
+    border-radius: 5px;
+    border: 1px solid rgb(182, 181, 181);
+    /* border-style: none; */
+}
+
+.corner-square-nb{
+    border-radius: 5px;
+    
+    /* border-style: none; */
+}
+
+.button-blue{
+    background-color: rgba(94, 25, 253, 0.959);
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.button-gray{
+    background-color: rgba(235, 233, 233, 0.959);
+    border-style: none;
+    border-radius: 5px;
+    color: rgb(149, 149, 149); 
+}
+
+.button-white{
+    background-color: white;
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    color: rgb(71, 71, 71); 
+}
+
+input {
+    text-align: left;
+}
+
+.footer-design{
+    background-color: rgb(210, 214, 219,);
+}
+.div.etiquetas ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    color: $text-comment;
+    justify-content: flex-start;
+    
+  }
+
+.read-next {
+    border-radius: 10px;
+    background-color: $color-post-border;
+    border: 1px solid rgb(182, 181, 181);
+    
+}

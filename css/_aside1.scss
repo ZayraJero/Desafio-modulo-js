@@ -1,0 +1,73 @@
+.aside-list ul{
+    padding-left: 0;
+    li{
+        margin: 10px 0;
+        &:hover{
+            color: $color-purple;
+            background: rgba(184, 178, 178, 0.507);
+            border-radius: 5px;
+            padding: 8px;
+            
+            
+        }
+    }
+}
+        .More{
+            color: $text-comment;
+            font-size: 15px;
+            &:hover{
+                background: rgba(184, 178, 178, 0.507);
+                border-radius: 5px;
+                padding: 8px;
+            }
+        }  
+  
+
+ /* .aside1{
+         
+    margin: 10 0;
+    font-size: 95%;
+    padding: 8px;
+    
+ }         */
+.tag-aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    img{
+        &:hover{
+            background: rgba(184, 178, 178, 0.507);
+            
+        }
+    }
+    
+}   
+.imagen-size{
+
+    img {
+        
+        width: 100%;
+        margin-bottom: 20px;
+    
+        
+    }
+     
+    p {
+        color:$color-purple;
+        font-weight: bold;
+        font-size: 25px;
+
+    }
+            
+} 
+
+.name-perfil {
+    margin-left: 10px;
+    
+}
+.span-name {
+    font-size: 13px;
+    color: $text-comment;
+}
+
