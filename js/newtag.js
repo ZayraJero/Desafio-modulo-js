@@ -17,18 +17,3 @@ $(document).ready(function(){
     })
 })
 
-// Get New Tag (Get)
-if ($('.tag').length > 0) {
-    $.ajax({
-        url: "https://retofrontend-213c9-default-rtdb.firebaseio.com/tags/.json",
-        method: 'GET'
-    }).done(function (response) {
-        paintPost(response)
-
-    }).fail(function (err) {
-        console.log(err)
-        console.log(err.status)
-        console.log(err.statusText)
-        console.log('error')
-    })
-}
