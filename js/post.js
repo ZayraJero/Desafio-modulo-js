@@ -18,6 +18,7 @@ $(function (post) {
         <div class="div etiquetas">
             <ul>
                 <li class="li px-1"><span>${response.tag}</span></li>
+                <li class="bg-info"></li>
             </ul>
         </div>
        
