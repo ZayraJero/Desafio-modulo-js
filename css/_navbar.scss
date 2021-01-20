@@ -1,18 +1,25 @@
 .container{
     padding:10px auto;
     width: 100%;
+    display: flex;
+background: blue($color: #000000);
+}
 
+.navbar{
+    background: blue($color: #000000);
 }
 
 .logo-img{
-    padding-left: 10px;
+    padding-left: 0 50px;
 }
 
 .nav-search{
-    padding-left: 5px;
-    width: 150px;
+    padding-left: 10px;
+    width: 140px;
+    @include desktop() {
+        width: 300px;
+        }
 
-    
 }
 .nav-btn{
     font-size: 15px;
@@ -24,10 +31,14 @@
     &:hover{
           background: $color-hover;  
     }
+    @include desktop() {
+        padding: 8px 20px;
+        font-size: 16px;
+        }
 } 
 .wrap-icon{
     @include tablet(){
-       margin: 0 15px;
+       padding: 0 15px;
             }
    
 }
@@ -40,6 +51,12 @@
    .icon{
            padding: 0 15px;
    }
+   @include tablet(){
+    padding: 0 30px;
+         }
+         @include desktop() {
+            padding: 0 10px;
+            }
 }
 
 
