@@ -8,23 +8,21 @@ $(function (post) {
         method: 'GET'
     }).done(function (response) {
         let readHtml = ` 
-        <div class="col-12 col-md-10 col-lg-12 bg-light read-post">
+        <div class="col-12 col-md-10 col-lg-12 g-white read-post">
         <div class="div img-art-principal">
             <img src="${response.urlPhoto}" class="img-fluid" alt="Responsive image">
         </div>
-        <div>
+        <div class="p-3">
             <h1><strong>"${response.title}"</strong></h1>
-        </div>
+       
         <div class="div etiquetas">
             <ul>
                 <li class="li px-1"><span>${response.tag}</span></li>
             </ul>
         </div>
-        <div>
-            <img src="${response.urlAuthor}" width="50" alt="user-1" class="rounded-circle border border">
-            <p><strong>${response.dateCreated}</strong>  ${response.minsToRead}</p>
-        </div>
-        <div>
+       
+           <p> <img src="${response.urlAuthor}" width="50" class="rounded-circle border border"> ${response.author} <span class="text-muted">${response.dateCreated} ${response.minsToRead}</span></p>
+
             <p>
             ${response.content}
             </p>
@@ -37,6 +35,4 @@ $(function (post) {
         console.log(err.statusText)
         console.log('error')
     })
-    console.log(url, id)
 })
-
