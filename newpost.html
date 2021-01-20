@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <form action="" id="form-new-post">
+
+                        <h1>Crea un nuevo Post</h1>
+                        <div class="mb-3">
+                            <label for="author__input" class="form-label">author</label>
+                            <input type="text" class="form-control" id="author__input" placeholder="name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="content__input" class="form-label">content</label>
+                            <textarea class="form-control" id="content__input" aria-label="width textarea"
+                                placeholder=" Write the content " row=""></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="datecreated__input" class="form-label">dateCreated</label>
+                            <input type="text" class="form-control" id="datecreated__input" placeholder="date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="minsToRead__input" class="form-label">Mins To Read</label>
+                            <input type="text" class="form-control" id="minsToRead__input" placeholder="Mins To Read">
+                        </div>
+                        <div class="mb-3">
+                            <label for="organization__input" class="form-label">Organization</label>
+                            <input type="text" class="form-control" id="organization__input" placeholder="organization">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tag__input" class="form-label">Tag</label>
+                            <input type="text" class="form-control" id="tag__input" placeholder="tag">
+                        </div>
+                        <div class="mb-3">
+                            <label for="title__input" class="form-label">title</label>
+                            <input type="text" class="form-control" id="title__input" placeholder="title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="url__author" class="form-label">URL author</label>
+                            <input type="text" class="form-control" id="url__author" placeholder="https://Ejemplo.con">
+                        </div>
+                        <div class="mb-3">
+                            <label for="url__photo" class="form-label">URL photo</label>
+                            <input type="text" class="form-control" id="url__photo" placeholder="ejemplo@kodemia.mx">
+                        </div>
+
+                        <div class="alert alert-success d-none" role="alert" id="alert__form">
+                            Post creado correctamente
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button type="button" class="btn btn-primary send__form ">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/newpost.js"></script>
+
+</body>
+
+</html>
