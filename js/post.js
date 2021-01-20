@@ -13,7 +13,7 @@ $(function (post) {
             <img src="${response.urlPhoto}" class="img-fluid" alt="Responsive image">
         </div>
         <div class="p-3">
-            <h1><strong>"${response.title}"</strong></h1>
+            <h1><strong>${response.title}</strong></h1>
        
         <div class="div etiquetas">
             <ul>
