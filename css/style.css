@@ -15,15 +15,29 @@ ul, li {
 .container {
   padding: 10px auto;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: 0;
+}
+
+.navbar {
+  background: 0;
 }
 
 .logo-img {
-  padding-left: 10px;
+  padding-left: 0 50px;
 }
 
 .nav-search {
-  padding-left: 5px;
-  width: 150px;
+  padding-left: 10px;
+  width: 140px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-search {
+    width: 300px;
+  }
 }
 
 .nav-btn {
@@ -39,9 +53,16 @@ ul, li {
   background: #323ebe;
 }
 
+@media only screen and (min-width: 1024px) {
+  .nav-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .wrap-icon {
-    margin: 0 15px;
+    padding: 0 15px;
   }
 }
 
@@ -59,6 +80,18 @@ ul, li {
 
 .icon-nav .icon {
   padding: 0 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .icon-nav {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .icon-nav {
+    padding: 0 10px;
+  }
 }
 
 .dropdown-menu {
@@ -119,7 +152,7 @@ ul, li {
 }
 
 .imagen-size img {
-  width: 100%;
+  width: 80%;
   margin-bottom: 20px;
 }
 
