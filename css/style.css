@@ -12,6 +12,10 @@ ul, li {
   background: #eef0f1;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   padding: 10px auto;
   width: 100%;
@@ -455,8 +459,6 @@ ul, li {
   color: #3b49df;
   background: white;
 }
-
-
 
 /* .font-size{
     
