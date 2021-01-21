@@ -1,6 +1,6 @@
 // Create New Tag (Post)
-$(document).ready(function(){
-    $('.tagNameSend').click(function(){
+$(document).ready(function () {
+    $('.tagNameSend').click(function () {
         let tagInput = $('.askTagInput').val()
         let tagName = {
             "title": tagInput
@@ -11,6 +11,7 @@ $(document).ready(function(){
             data: JSON.stringify(tagName)
         }).done(function (response) {
             console.log(response)
+            location.pathname = "/"
         }).fail(function (err) {
             console.log(err)
         })
