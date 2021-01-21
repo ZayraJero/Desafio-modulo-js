@@ -1,78 +1,81 @@
 $(document).ready(function () {
-    $('#author__input').focus()
-    $('.send__form').click(function () {
-        let obj = {}
-        let author__input = $('#author__input').val()
-        let content__input = $('#content__input').val()
-        let datecreated__input = $('#datecreated__input').val()
-        let minsToRead__input = $('#minsToRead__input').val()
-        let organization__input = $('#organization__input').val()
-        let tag__input = $('#tag__input').val()
-        let title__input = $('#title__input').val()
-        let url__author = $('#url__author').val()
-        let url__photo = $('#url__photo').val()
+    $('#author').focus()
+    $('.send__form').click(function (event) {
 
+        console.log("loquesea")
+        event.preventDefault()
+        let author = $('#author').val()
+        let content = $('#content').val()
+        let dateCreated = $('#dateCreated').val()
+        let minsToRead = $('#minsToRead').val()
+        let organization = $('#organization').val()
+        let tag = $('#tag').val()
+        let title = $('#title').val()
+        let urlAuthor = $('#urlAuthor').val()
+        let urlPhoto = $('#urlPhoto').val()
 
-        if (author__input === "") {
+        if (author === "") {
             alert('error, el campo no puede estar vacio')
-            $('#author__input').focus()
+            $('#author').focus()
 
-        } else if (content__input === "") {
+        } else if (content === "") {
             alert('error, el campo no puede estar vacio')
-            $('#content__input').focus()
+            $('#content').focus()
 
-        } else if (datecreated__input === "") {
+        } else if (dateCreated === "") {
             alert('error, el campo no puede estar vacio')
-            $('#datecreated__input').focus()
+            $('#dateCreated').focus()
 
-        } else if (minsToRead__input === "") {
+        } else if (minsToRead === "") {
             alert('error, el campo no puede estar vacio')
-            $('#minsToRead__input').focus()
+            $('#minsToRead').focus()
 
-        } else if (organization__input === "") {
+        } else if (organization === "") {
             alert('error, el campo no puede estar vacio')
-            $('#organization__input').focus()
+            $('#organization').focus()
 
-        } else if (tag__input === "") {
+        } else if (tag === "") {
             alert('error, el campo no puede estar vacio')
-            $('#tag__input').focus()
+            $('#tag').focus()
 
-        } else if (title__input === "") {
+        } else if (title === "") {
             alert('error, el campo no puede estar vacio')
-            $('#title__input').focus()
+            $('#title').focus()
 
-        } else if (url__author === "") {
+        } else if (urlAuthor === "") {
             alert('error, el campo no puede estar vacio')
-            $('#url__author').focus()
-        } else if (url__photo === "") {
+            $('#urlAuthor').focus()
+        } else if (urlPhoto === "") {
             alert('error, el campo no puede estar vacio')
-            $('#url__photo').focus()
+            $('#urlPhoto').focus()
         } else {
-            obj = {
-                "author__input": author__input,
-                "content__input": content__input,
-                "datecreated__input": datecreated__input,
-                "minsToRead__input": minsToRead__input,
-                "organization__input": organization__input,
-                "tag__input": tag__input,
-                "title__input": title__input,
-                "url__author": url__author,
-                "url__photo": url__photo
+            let postObject = {
+                "author": author,
+                "content": content,
+                "dateCreated": dateCreated,
+                "minsToRead": minsToRead,
+                "organization": organization,
+                "tag": tag,
+                "title": title,
+                "urlAuthor": urlAuthor,
+                "urlPhoto": urlPhoto
             }
 
             $.ajax({
                 url: "https://retofrontend-213c9-default-rtdb.firebaseio.com/posts/.json",
                 method: "POST",
-                data: JSON.stringify(obj)
+                data: JSON.stringify(postObject)
             }).done(function (response) {
                 console.log(response);
+                location.pathname = "/"
+
             }).fail(function (error) {
                 console.log(error);
             })
 
         }
 
-
+        console.log("hola")
 
     })
 
